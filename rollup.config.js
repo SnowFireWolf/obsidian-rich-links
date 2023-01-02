@@ -12,9 +12,11 @@ if you want to view the source visit the plugins github repository
 `;
 
 export default {
-  input: 'main.ts',
+  input: [
+    'main.ts',
+  ],
   output: {
-    dir: '.',
+    dir: './dist',
     sourcemap: 'inline',
     sourcemapExcludeSources: isProd,
     format: 'cjs',

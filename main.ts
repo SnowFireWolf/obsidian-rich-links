@@ -66,7 +66,8 @@ export default class ObsidianRichLinksPlugin extends Plugin {
 		  const imageLink = data.links[0].href || '';
 
         editor.replaceSelection(`
-<div class="rich-link-card-container"><a class="rich-link-card" href="${url}" target="_blank">
+<div class="rich-link-card-container">
+  <a class="rich-link-card" href="${url}" target="_blank">
 	<div class="rich-link-image-container">
 		<div class="rich-link-image" style="background-image: url('${imageLink}')">
 	</div>
@@ -81,7 +82,6 @@ export default class ObsidianRichLinksPlugin extends Plugin {
 		</p>
 	</div>
 </a></div>
-
 `);
       });
     } else {
